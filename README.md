@@ -7,7 +7,7 @@
 
 # PDF Document API - Convert DOCX to PDF in a Chiseled .NET Docker Container
 
-This example converts a DOCX document to PDF with DevExpress RichEdit and outputs the generated PDF. The project is designed to run in a Linux chiseled runtime image (`aspnet:10.0-noble-chiseled-composite-extra`) and demonstrates the following actions:
+This example uses DevExpress Word Processing Document API to generate a DOCX document and save it to a PDF file. The project is designed to run in a Linux chiseled runtime image (`aspnet:10.0-noble-chiseled-composite-extra`) and demonstrates the following actions:
 
 - Use DevExpress PDF Document API in a container
 - Use the Skia drawing engine (`DevExpress.Drawing.Skia`)
