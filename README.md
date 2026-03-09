@@ -5,30 +5,30 @@
 [![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
 <!-- default badges end -->
 
-# PDF Document API - Convert DOCX to PDF in a Chiseled .NET Docker Container
+# DevExpress Office File API - Generate and Convert Documents in a Chiseled .NET Docker Container
 
-This example uses DevExpress Word Processing Document API to generate a DOCX document and save it to a PDF file. The project is designed to run in a Linux chiseled runtime image (`aspnet:10.0-noble-chiseled-composite-extra`) and demonstrates the following actions:
+This example uses DevExpress Office File API to generate a DOCX document and save it to a PDF file. The project is designed to run in a Linux chiseled runtime image (`aspnet:10.0-noble-chiseled-composite-extra`) and demonstrates the following actions:
 
-- Use DevExpress PDF Document API in a container
+- Use DevExpress Office File API in a container
 - Use the Skia drawing engine (`DevExpress.Drawing.Skia`)
 - Register custom `.ttf` fonts from the app directory
 - Stream binary PDF output through standard output
 
-## Build and run with Docker
+## Build and Run with Docker
 
-Build image:
+Build an image:
 
 ```bash
 docker build -f CS/Dockerfile -t chiseled-docx2pdf CS
 ```
 
-Run conversion (PDF is redirected to host file):
+Run conversion (PDF is redirected to the host file):
 
 ```bash
 docker run --rm chiseled-docx2pdf CS/fontTest.docx > out.pdf
 ```
 
-If your input file is outside the image, mount a host folder and pass a mounted path.
+If your input file is outside the image, mount a host folder and pass the mounted path.
 
 ## Files to Review
 
