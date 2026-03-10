@@ -9,10 +9,10 @@
 
 This example uses DevExpress Office File API to generate a DOCX document and save it to a PDF file. The project is designed to run in a Linux chiseled runtime image (`aspnet:10.0-noble-chiseled-composite-extra`) and demonstrates the following actions:
 
-- Use DevExpress Office File API in a container
-- Use the Skia drawing engine (`DevExpress.Drawing.Skia`)
-- Register custom `.ttf` fonts from the app directory
-- Stream binary PDF output through standard output
+- Uses the DevExpress Office File API in a container
+- Uses the Skia drawing engine (`DevExpress.Drawing.Skia`)
+- Registers custom `.ttf` fonts from the app directory
+- Streams binary PDF output through standard output
 
 ## Build and Run with Docker
 
