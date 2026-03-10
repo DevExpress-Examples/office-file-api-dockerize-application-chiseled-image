@@ -14,7 +14,11 @@
     <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="3.119.2" ExcludeAssets="runtime" PrivateAssets="all" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="fontTest.docx" CopyToPublishDirectory="Always" />
-    <None Include="*.ttf" CopyToPublishDirectory="Always" />
+    <Content Include="Inter-Regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="NotoSans-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 </Project>
