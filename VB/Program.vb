@@ -8,6 +8,7 @@ Friend Module Program
             Dim baseDir = AppContext.BaseDirectory
             Dim docxPath = If(args.Length >= 1, args(0), Path.Combine(baseDir, "fontTest.docx"))
             ' Include Fonts in the Application
+            Dim fonts As String() = _("Inter-Regular.ttf", "NotoSans-Regular.ttf")
             Dim fontFiles As String() = fonts.
                 Select(Function(f) Path.Combine(AppContext.BaseDirectory, f)).
                 ToArray()
