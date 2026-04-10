@@ -8,20 +8,11 @@ Friend Module Program
             Dim baseDir = AppContext.BaseDirectory
             Dim docxPath = If(args.Length >= 1, args(0), Path.Combine(baseDir, "fontTest.docx"))
             ' Include Fonts in the Application
-            Dim fontFiles As String() = _("Inter-Regular.ttf", "NotoSans-Regular.ttf")
-             ''' Cannot convert LocalDeclarationStatementSyntax, System.InvalidCastException: Unable to cast object of type 'Microsoft.CodeAnalysis.VisualBasic.Syntax.EmptyStatementSyntax' to type 'Microsoft.CodeAnalysis.VisualBasic.Syntax.ExpressionSyntax'.
-'''    at ICSharpCode.CodeConverter.VB.CommonConversions.RemodelVariableDeclaration(VariableDeclarationSyntax declaration) in C:\builds\CS2VB\CodeConverter-master\CodeConverter\VB\CommonConversions.cs:line 478
-'''    at ICSharpCode.CodeConverter.VB.MethodBodyExecutableStatementVisitor.VisitLocalDeclarationStatement(LocalDeclarationStatementSyntax node) in C:\builds\CS2VB\CodeConverter-master\CodeConverter\VB\MethodBodyExecutableStatementVisitor.cs:line 59
-'''    at Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor`1.Visit(SyntaxNode node)
-'''    at ICSharpCode.CodeConverter.VB.CommentConvertingMethodBodyVisitor.DefaultVisit(SyntaxNode node) in C:\builds\CS2VB\CodeConverter-master\CodeConverter\VB\CommentConvertingMethodBodyVisitor.cs:line 24
-''' 
-''' Input:
-'''             string[] fontPaths = [.. fontFiles.Select(f => Path.Combine(baseDir, f))];
-''' 
-'''  ' Use the Skia Drawing Engine
-Settings.DrawingEngine = DrawingEngine.Skia
+            Dim fontFiles As String() = fonts.
+                Select(Function(f) Path.Combine(AppContext.BaseDirectory, f)).
+                ToArray()
             ' Register fonts before loading documents
-            For Each fp In fontPaths
+            For Each fp In fontFiles
                 Call DXFontRepository.Instance.AddFont(fp)
             Next
 
